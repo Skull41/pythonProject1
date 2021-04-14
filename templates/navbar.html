@@ -1,0 +1,40 @@
+{%load static%}
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">PyShop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sales</a>
+        </li>
+<!--        <li class="nav-item dropdown">-->
+<!--          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Dropdown-->
+<!--          </a>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--            <li><hr class="dropdown-divider"></li>-->
+<!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--          </ul>-->
+<!--        </li>-->
+        <li class="nav-item">
+          <a class="nav-link " href="/admin/login/?next=/admin/" tabindex="-1" aria-disabled="true">Account</a>
+        </li>
+      </ul>
+      <form class="d-grid gap-2 d-md-flex ">
+        <button class="btn btn-outline-light"  style="height:35px; width:95px;margin-top:0.4em;border-radius:5em; font-weight:bold;" type="submit">Login</button>
+        <a href="/cart"> <img class="cart" style="width:90px; height:76px; display:inline-block; margin-top:-15px;margin-bottom:-15px;" src="{%static 'images/cart.svg'%}" alt=""> </a>
+      </form>
+    </div>
+  </div>
+</nav>

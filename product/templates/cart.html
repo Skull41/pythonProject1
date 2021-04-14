@@ -1,0 +1,192 @@
+{% extends 'base.html'%}
+{% load static %}
+{%block content%}
+
+
+<style>
+
+body{
+margin:0px;
+background-color: #EEEDFF;
+}
+
+h1{
+color: #FF9343;
+margin:0;
+
+}
+
+.container-1{
+background-color:#00FFBF;
+font-weight:bold;
+position:relative;
+padding:10px;
+margin-top: 20px;
+border-radius: 5em;
+
+
+}
+
+.container-2{
+font-weight:bold;
+padding:10px;
+margin-top: 20px;
+}
+
+
+.tag{
+display:flex;
+flex-direction:row;
+<!--justify-content:space-around;-->
+
+}
+
+
+.back{
+
+display:inline-block;
+<!--position:relative;-->
+
+}
+
+.total{
+<!--display:flex;-->
+
+color: red;
+}
+
+
+
+
+.end{
+background-color:#00FFBF;
+border-radius:5em;
+padding:4px;
+margin-bottom: 10px;
+font-weight:bolder;
+position:relative;
+display:flex;
+flex-direction:row;
+justify-content: center;
+
+}
+
+img{
+width: 10px;
+height:10px;
+display:block;
+margin: 1px;
+}
+
+.up{
+margin:0;
+padding:0;
+display:block;
+position:relative;
+right:7%;
+bottom:4%;
+
+}
+
+.down{
+margin:0;
+padding:0;
+
+position:relative;
+right:8.269%;
+top: 30%;
+}
+
+</style>
+
+
+    <div class="container">
+    <h1>Shopping Cart</h1>
+    <a class="btn btn-sm btn-outline-success back " style="font-weight:bold; margin-top: 1em;" href="/">&#x2190; Continue Shopping</a>
+    </div>
+
+    <div class="container-1">
+        <div class=" tag">
+            <ul style="flex:1;">  </ul>
+            <ul  style="flex:4; margin-left:20px;">Items</ul>
+            <ul style="flex:1;" >Unit Price</ul>
+            <ul style="flex:1;">Qty</ul>
+            <ul style="flex:1;">Subtotal</ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-2">
+
+        <div class="row">
+            <div class="col" style="display:flex;">
+
+            <ul style="flex:1;"></ul>
+            <ul  style="flex:5; margin-left:20px;">Items-1</ul>
+            <ul style="flex:1;" >50$</ul>
+            <ul class="qty" style="flex:1;">2</ul>
+               <div class="btn up"> <img src="{%static 'images/up.png'%}" alt="" > </div>
+                <div class="btn down"><img src="{%static 'images/down.png'%}" alt=""></div>
+            <ul style="flex:1;">50$</ul>
+            </div>
+        </div>
+    </div>
+<br>
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            <div class="box-element end">
+
+            <ul class="total">Total Amount:</ul>
+
+            <ul>50$</ul>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+    <div class="container">
+
+
+
+        <div class="checkout">
+
+            <a class="btn btn-outline-primary" style="float:right;" href="/checkout"> Checkout</a>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

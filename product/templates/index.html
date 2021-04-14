@@ -1,0 +1,77 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{%block content%}
+
+<section class="Hero">
+     <div class="container-fluid">
+        <h1 class="head">Products</h1>
+    </div>
+
+</section>
+
+
+
+<style>
+    img{
+    object-fit: cover;
+    height: 200px;
+    margin-top: 5px;
+    padding: 20px;
+    }
+
+
+.head{
+text-align: center;
+background-color: #00C5E6;
+color: black;
+margin-bottom: 5px;
+padding: 1em;
+
+}
+
+
+
+body{
+background-color: #EEEDFF;
+}
+
+
+.card{
+    border: 2px solid grey ;
+    box-shadow: 0 0 10px #719ECE;
+
+}
+
+.btn{
+
+
+
+}
+
+
+
+
+</style>
+
+<div class="container-fluid">
+<div class="row gy-3  justify-content-between align-items-center ">
+    {% for product in products%}
+
+        <div class="col-sm-6 col-xs-12 col-md-6 col-lg-3 justify-content-around align-items-center ">
+        <div class="card " style="width: 16rem; height: 22rem; border ">
+
+            <img src="{{ product.image_url}}" class="card-img-top " alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-center">{{ product.name }}</h5>
+                <p class="card-text text-center">${{ product.price }}</p>
+                <a href="#" class="btn col-4 btn-outline-success ">View</a>
+                <a href="#" class="btn col-7 btn-outline-success" style="float:right; font-weight:bold;">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{%endblock%}
+
